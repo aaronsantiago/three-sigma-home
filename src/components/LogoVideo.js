@@ -32,12 +32,12 @@ export default function LogoVideo() {
       <div
         ref={containerRef}
         style={{ height: "300vh" }}
-        class="w-full bg-black overscroll-none sticky top-0"
+        className="w-full bg-black overscroll-none sticky top-0"
       >
-        <div class="sticky top-0 w-screen h-screen">
-          <div style={{height: "calc(100vw * 18 / 23/2 + 3px)", bottom: "calc(100vw * 18 / 23/2)"}} class="z-10 absolute w-full bg-gradient-to-b from-black" />
+        <div className="sticky top-0 w-screen h-screen">
+          <div style={{height: "calc(100vw * 18 / 23/2 + 3px)", bottom: "calc(100vw * 18 / 23/2)"}} className="z-10 absolute w-full bg-gradient-to-b from-black" />
           <video
-            class="absolute bottom-0 w-screen"
+            className="absolute bottom-0 w-screen"
             autobuffer="autobuffer"
             preload="preload"
             ref={videoRef}

@@ -19,7 +19,7 @@ export default function Scene1() {
     requestAnimationFrame(scrollHandler);
   }, []);
   return (
-    <div class="bg-green-500 w-screen h-screen">
+    <div className="bg-green-500 w-screen h-screen">
       <Canvas>
         <CustomRender/>
         <ambientLight intensity={0.1} />

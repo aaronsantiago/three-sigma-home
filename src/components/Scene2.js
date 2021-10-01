@@ -62,7 +62,7 @@ export default function Scene2() {
 
   return (
     <>
-      <div class="bg-blue-500 w-screen h-screen">
+      <div className="bg-blue-500 w-screen h-screen">
         <Canvas>
           <ambientLight intensity={0.1} />
           <directionalLight position={[3, 0, 5]} />
