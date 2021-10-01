@@ -11,8 +11,10 @@ import fragment from './glsl/shader.frag'
 
 const ColorShiftMaterial = shaderMaterial(
   {
-    time: 0,
-    color: new THREE.Color(0.05, 0.0, 0.025),
+    time: { value: 0 },
+    colorStart: { value: new THREE.Color('blue') },
+    colorMid: { value: new THREE.Color('green') },
+    colorEnd: { value: new THREE.Color('pink') }
   },
   vertex,
   fragment
@@ -57,4 +59,4 @@ const Shader = (props) => {
   )
 }
 
-export default Shader
+export default ColorShiftMaterial
