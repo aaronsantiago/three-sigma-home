@@ -17,14 +17,14 @@ function MagicMirror({ children, ...props }) {
     // Then we set the render-target to the buffer that we have created
     state.gl.setRenderTarget(fbo);
     // We render the scene into it, using the local camera that is clamped to the planes aspect ratio
-    state.gl.render(scene, state.camera);
+    state.gl.render(scene, cam.current);
     // And flip the render-target to the default again
     state.gl.setRenderTarget(null);
   });
   return (
     <>
       <mesh {...props}>
-        <planeGeometry args={[2.5, 5]} />
+        <planeGeometry args={[16/2, 9/2]} />
         {/* The "mirror" is just a boring plane, but it receives the buffer texture */}
         <meshBasicMaterial map={fbo.texture} />
       </mesh>
@@ -32,7 +32,7 @@ function MagicMirror({ children, ...props }) {
         manual
         ref={cam}
         fov={50}
-        aspect={2.5 / 5}
+        aspect={16/ 9}
         onUpdate={(c) => c.updateProjectionMatrix()}
       />
       {/* This is React being awesome, we portal this components children into the separate scene above */}
@@ -66,19 +66,8 @@ export default function Scene2() {
         <Canvas>
           <ambientLight intensity={0.1} />
           <directionalLight position={[3, 0, 5]} />
-          <mesh rotation={[Math.PI / 8, scroll * Math.PI * 6, 0]}>
-            <boxGeometry />
-            <meshPhongMaterial />
-          </mesh>
-          <mesh
-            position={[1, 0, 0]}
-            rotation={[Math.PI / 8, scroll * Math.PI * 6, 0]}
-          >
-            <boxGeometry />
-            <meshPhongMaterial />
-          </mesh>
           {/* <ScreenFx/> */}
-          <MagicMirror>
+          <MagicMirror rotation={[-(1 - scroll) * Math.PI * 8,0,0]} position={[0,0,-(1-scroll) * 100]}>
             <ScreenFx/>
           </MagicMirror>
         </Canvas>

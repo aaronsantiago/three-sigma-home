@@ -51,7 +51,7 @@ export default function ScreenFx() {
         scale={[9.9, 9.9, 9.9]}
       />
       <ShaderPlane position={[0, 0, -30]} scale={[15.9, 15.9, 15.9]} />
-      <color attach="background" args={["#f0efeb"]} />
+      <color attach="background" args={["#ec3022"]} />
     </>
   );
 }
