@@ -51,7 +51,7 @@ export default function CustomCursor() {
   return (
     <div
       style={{ top: y, left: x }}
-      className='fixed w-44 h-44 -ml-12 -mt-12'
+      className='fixed w-44 h-44 -ml-12 -mt-12 pointer-events-none'
     >
       <Canvas>
         <ambientLight intensity={1} color={'white'} />
