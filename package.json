@@ -32,7 +32,8 @@
     "short-uuid": "^4.2.0",
     "three": "^0.132.2",
     "three-noise": "^1.1.0",
-    "three-stdlib": "^2.4.0"
+    "three-stdlib": "^2.5.4",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.4",
@@ -48,6 +49,7 @@
     "glslify-loader": "^2.0.0",
     "next-compose-plugins": "^2.2.1",
     "next-offline": "^5.0.5",
+    "next-transpile-modules": "^8.0.0",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "raw-loader": "^4.0.2",
