@@ -1,25 +1,23 @@
-import Head from 'next/head'
-import LogoVideo from '@/components/LogoVideo'
-import Scene1 from '@/components/Scene1'
-import Scene2 from '@/components/Scene2'
-import InstancedGrid from '@/components/InstancedGrid'
-import LeafScene from '@/components/LeafScene'
+import Head from 'next/head';
+import LogoVideo from '@/components/LogoVideo';
+import Scene1 from '@/components/Scene1';
+import Scene2 from '@/components/Scene2';
+import InstancedGrid from '@/components/InstancedGrid';
+import LeafScene from '@/components/LeafScene';
 import xhr from 'xmlhttprequest';
-import CustomCursor from '@/components/CustomCursor'
+import CustomCursor from '@/components/CustomCursor';
+import Link from "next/link";
 var faker = require('faker');
 
 export default function Home() {
   return (
     <>
     <Head></Head>
-    <div className="mx-96 my-24 relative z-10 text-white">{faker.lorem.lines(1000)}</div>
-    {/* <LeafScene></LeafScene> */}
-    <InstancedGrid></InstancedGrid>
-
-    <CustomCursor />
-    {/* <LogoVideo></LogoVideo>
-    <Scene1></Scene1>
-    <Scene2></Scene2> */}
+      <CustomCursor />
+      <LogoVideo></LogoVideo>
+      <Scene1></Scene1>
+      <Link href="/cube">click me for cool webpage</Link>
+      <Scene2></Scene2>
     </>
     
   )
